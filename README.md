@@ -8,11 +8,13 @@ Use cli without `--profile <profile_name>` flag for ever command. Your existing 
 NPM link : [https://www.npmjs.com/package/aws-cli-switch](https://www.npmjs.com/package/aws-cli-switch)
 
 Choose an existing profile :
+<br>
 ![CLI Tool Image](imgs/cli-img-1.svg "CLI Tool Image")
 
 New shell(sh/bash) in MacOS/Linux or PowerShell in Windows is launched with the chosen profile :
+<br>
 ![CLI Tool Image](imgs/cli-img-2.svg "CLI Tool Image")
 
-You can how use the AWS CLI as if the chosen profile was default.
+You can now use the AWS CLI as if the chosen profile was default.
 
 ---
