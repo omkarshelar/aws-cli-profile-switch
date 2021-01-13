@@ -15,6 +15,7 @@ New shell(sh/bash) in MacOS/Linux or PowerShell in Windows is launched with the 
 <br>
 ![CLI Tool Image](imgs/cli-img-2.svg "CLI Tool Image")
 
+You can verify the current profile using the `aws configure list` command to verify the profile switch.
 You can now use the AWS CLI as if the chosen profile was default.
 
 ---
