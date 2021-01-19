@@ -3,7 +3,7 @@
 **Easily switch profiles configured via AWS cli.**
 
 CLI tool which allows you to switch between multiple AWS CLI profiles.
-Use cli without `--profile <profile_name>` flag for ever command. Your existing scripts work without profile settings!
+Use cli without `--profile <profile_name>` flag for every command. Your existing scripts work without profile settings!
 
 NPM link : [https://www.npmjs.com/package/aws-cli-switch](https://www.npmjs.com/package/aws-cli-switch)
 
