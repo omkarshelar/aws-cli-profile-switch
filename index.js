@@ -8,7 +8,7 @@ const chalk = require("chalk");
 
 const profileNames = listCredentials();
 chooseProfiles(profileNames).then((answer) => {
-  const cmd = chooseProcess();
+  const [cmd] = chooseProcess();
   createNewShell(cmd, [], answer.profileName);
 });
 
@@ -18,13 +18,16 @@ const createNewShell = (cmd, args, profileName) => {
     env: { ...process.env, AWS_PROFILE: profileName },
   });
 
+  const [, friendlyName] = chooseProcess();
+
   console.log(
-    `Started New PowerShell with PID ${shell.pid}
+    `Started New ${friendlyName} with PID ${shell.pid}
   Execute ${chalk.blue("'exit'")} command to return to previous shell.
   Using profile ${chalk.underline.green(profileName)}`
   );
 
   shell.on("close", (code) => {
-    console.log("[PowerShell] terminated :", code);
+    const [, friendlyName] = chooseProcess();
+    console.log(`[${friendlyName}] terminated :`, code);
   });
 };
