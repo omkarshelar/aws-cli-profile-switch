@@ -1,6 +1,6 @@
 {
   "name": "aws-cli-switch",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Switch AWS credential profiles with a simple command",
   "main": "index.js",
   "scripts": {

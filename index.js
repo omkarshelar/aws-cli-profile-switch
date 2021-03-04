@@ -7,6 +7,14 @@ const { chooseProcess } = require("./utils/processChooser");
 const chalk = require("chalk");
 
 const profileNames = listCredentials();
+if (profileNames.length == 0) {
+  console.log(
+    `No configured profiles found. Please configure profiles using the ${chalk.green(
+      "'aws configure'"
+    )} command`
+  );
+  process.exit(0);
+}
 chooseProfiles(profileNames).then((answer) => {
   const [cmd] = chooseProcess();
   createNewShell(cmd, [], answer.profileName);
